@@ -20,3 +20,15 @@ Run locally:
 5. Open http://localhost:3000
 
 Security note: Keep your API key secret. Deploy the server only to trusted hosting and keep the key in environment variables.
+
+Deploying to Render (recommended)
+
+1. Go to https://render.com and sign in with GitHub.
+2. Click New -> Web Service and choose this repository (Divyansh-Yadav).
+3. Render will detect the `render.yaml` manifest and propose creating a service named `chatgpt-web` using the `chatgpt-web` branch and the `chatgpt-web` directory as the root.
+4. In the Render dashboard for the new service, go to the Environment -> Environment Variables section and add `OPENAI_API_KEY` with your secret API key.
+5. Deploy — Render will run `npm install` and `npm start` from the `chatgpt-web` directory.
+
+Notes:
+- Do NOT store your OpenAI API key in the code or commit it.
+- If you prefer Vercel or another provider, let me know and I can add their config files.

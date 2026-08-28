@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: chatgpt-web
+    env: node
+    branch: chatgpt-web
+    root: chatgpt-web
+    autoDeploy: true
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
