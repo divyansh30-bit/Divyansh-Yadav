@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT-like Web Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>ChatGPT-like Web Demo</h1>
+
+    <div id="chat" class="chat"></div>
+
+    <form id="form" class="composer">
+      <input id="input" type="text" placeholder="Type a message..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+
+    <p class="note">This demo calls a local server endpoint <code>/api/chat</code> which proxies requests to the OpenAI API. Run the server with your OPENAI_API_KEY in the environment.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
